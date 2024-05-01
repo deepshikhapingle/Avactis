@@ -40,14 +40,20 @@ describe('Login via custom command', () => {
         shoppingPage.shippingAsBillingCheckbox().check();
         shoppingPage.continueCheckoutButton().click();
         shoppingPage.billingAddress1Line().should("contain", mydata1.Address1);
-        shoppingPage.billingAddress2Line().should("contain", "abcdefgh");
+        shoppingPage.billingAddress2Line().should("contain", mydata1.Address2);
         shoppingPage.deliveryOnNextBusinessDay().check();
         shoppingPage.continueCheckoutButton2().click();
         shoppingPage.valueOfFirstProduct().should("contain", mydata1.valueProduct1);
         shoppingPage.valueOfSecondProduct().should("contain", mydata1.valueProduct2);
         shoppingPage.valueOfThirdProduct().should("contain", mydata1.valueProduct3);
-
-
+        shoppingPage.productQtyFirst().should("contain", mydata1.productQty);
+        shoppingPage.productQtySecond().should("contain", mydata1.productQty);
+        shoppingPage.productQtyThird().should("contain", mydata1.productQty);
+        shoppingPage.shippingCharges().should("contain", mydata1.shippingCharges);
+        shoppingPage.placeOrderButton().click();
+        shoppingPage.orderDetails().should("contain", mydata1.orderDetails);
+        shoppingPage.orderID().should("contain", mydata1.orderID);
+        shoppingPage.orderTotal().should("contain", mydata1.orderTotal);
 
     })
 })

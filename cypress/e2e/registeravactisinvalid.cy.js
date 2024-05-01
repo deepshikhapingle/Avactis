@@ -9,8 +9,8 @@ describe('Login via custom command', () => {
         })
         cy.visit('http://localhost/avactis/register.php')
     })
-    it('Register', () => {
-        registerpage.getEmail().type(mydata1.email3);
+    it('registerationfail', () => {
+        registerpage.getEmail().type(mydata1.email);
         registerpage.getPassword().type(mydata1.password);
         registerpage.getRePassword().type(mydata1.password);
         registerpage.getFirstName().type(mydata1.name);
@@ -23,7 +23,7 @@ describe('Login via custom command', () => {
         registerpage.getAddress2().type(mydata1.Address2);
         registerpage.getContact().type(mydata1.number);
         registerpage.getRegiste().click();
-        cy.get('.myaccount_home > :nth-child(2)').invoke("text").should("eq", "Account created successfully. You are now registered.");
+        cy.get('.note').invoke("text").should("eq", "This account name is already taken. Please choose a different account name.");
 
     })
 })

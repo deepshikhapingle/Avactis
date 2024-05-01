@@ -30,3 +30,10 @@ Cypress.Commands.add('login', (id, password) => {
     cy.get("#account_sign_in_form_passwd_id").type(password)
 
 })
+
+Cypress.Commands.add('adminLogin', (id, password) => {
+    cy.get(':nth-child(2) > .input-icon > .form-control').type(id)
+    cy.get(':nth-child(3) > .input-icon > .form-control').type(password)
+
+})
+require('cypress-iframe')

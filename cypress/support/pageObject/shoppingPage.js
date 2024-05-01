@@ -76,5 +76,34 @@ class shoppingPage {
     valueOfThirdProduct() {
         return cy.get(':nth-child(4) > .product_sale_price > .value')
     }
+    productQtyFirst() {
+        return cy.get(':nth-child(2) > .product_quantity_selector')
+    }
+    productQtySecond() {
+        return cy.get(':nth-child(3) > .product_quantity_selector')
+    }
+    productQtyThird() {
+        return cy.get(':nth-child(4) > .product_quantity_selector')
+    }
+    shippingCharges() {
+        return cy.get(':nth-child(2) > .price')
+    }
+    placeOrderButton() {
+        return cy.get('#checkout_3 > .checkout_buttons > .btn-primary')
+    }
+    orderDetails() {
+        return cy.get('.row > :nth-child(1) > .portlet-title > .caption')
+
+    }
+    orderID() {
+        return cy.get(':nth-child(2) > .control-label')
+    }
+    orderTotal() {
+        return cy.get(':nth-child(3) > .price')
+    }
+    homePageNoLogin() {
+        return cy.get('.productset > .col-md-12 > h2')
+    }
+
 }
 export default new shoppingPage

@@ -28,5 +28,9 @@
     "productQty": "1",
     "valueProduct1": "15.99",
     "valueProduct2": "23.99",
-    "valueProduct3": "799.99"
+    "valueProduct3": "799.99",
+    "shippingCharges": "42.00",
+    "orderDetails": "Key order details",
+    "orderID": "Order Id",
+    "orderTotal": "881.97"
 }
