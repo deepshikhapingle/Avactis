@@ -1,4 +1,4 @@
-import shoppingPage from "../support/pageObject/shoppingPage"
+import shoppingpagewithoutlogin from "../support/pageObject/shoppingpagewithoutlogin"
 
 let mydata1
 describe('Shopping without Login', () => {
@@ -10,47 +10,51 @@ describe('Shopping without Login', () => {
         cy.visit('http://localhost/avactis')
     })
     it('Shopping without Login', () => {
-        shoppingPage.homePageText().invoke("text").should("eq", "You can review and modify your account options below.");
-        // shoppingPage.apperalOption().click({ force: true });
-        // shoppingPage.searchIcon().click();
-        // shoppingPage.searchBox().type(mydata1.searchTshirt);
-        // shoppingPage.searchButton().click();
-        // shoppingPage.productDetailsButton().click();
-        // shoppingPage.addToCartButton().click();
-        // shoppingPage.searchIcon().click();
-        // shoppingPage.searchBox().type(mydata1.searchMovie);
-        // shoppingPage.searchButton().click();
-        // shoppingPage.productDetailsButton().click();
-        // shoppingPage.addToCartButton().click();
-        // shoppingPage.searchIcon().click();
-        // shoppingPage.searchBox().type(mydata1.searchLaptop);
-        // shoppingPage.searchButton().click();
-        // shoppingPage.productDetailsButton().click();
-        // shoppingPage.addToCartButton().click();
-        // shoppingPage.myCartButton().click();
-        // shoppingPage.firstProductText().invoke("text").should("contain", mydata1.searchTshirt);
-        // shoppingPage.secondProductText().invoke("text").should("contain", mydata1.searchMovie);
-        // shoppingPage.thirdProductText().invoke("text").should("contain", mydata1.searchLaptop);
-        // shoppingPage.firstProductQty().select(mydata1.productQty);
-        // shoppingPage.secondProductQty().select(mydata1.productQty, { force: true });
-        // shoppingPage.thirdProductQty().select(mydata1.productQty, { force: true });
-        // shoppingPage.checkoutButton().click();
-        // shoppingPage.shippingAsBillingCheckbox().check();
-        // shoppingPage.continueCheckoutButton().click();
-        // shoppingPage.billingAddress1Line().should("contain", mydata1.Address1);
-        // shoppingPage.billingAddress2Line().should("contain", mydata1.Address2);
-        // shoppingPage.deliveryOnNextBusinessDay().check();
-        // shoppingPage.continueCheckoutButton2().click();
-        // shoppingPage.valueOfFirstProduct().should("contain", mydata1.valueProduct1);
-        // shoppingPage.valueOfSecondProduct().should("contain", mydata1.valueProduct2);
-        // shoppingPage.valueOfThirdProduct().should("contain", mydata1.valueProduct3);
-        // shoppingPage.productQtyFirst().should("contain", mydata1.productQty);
-        // shoppingPage.productQtySecond().should("contain", mydata1.productQty);
-        // shoppingPage.productQtyThird().should("contain", mydata1.productQty);
-        // shoppingPage.shippingCharges().should("contain", mydata1.shippingCharges);
-        // shoppingPage.placeOrderButton().click();
-        // shoppingPage.orderDetails().should("contain", mydata1.orderDetails);
-        // shoppingPage.orderID().should("contain", mydata1.orderID);
+        shoppingpagewithoutlogin.apperalOption().click({ force: true });
+        shoppingpagewithoutlogin.searchBox().type(mydata1.searchTshirt, { force: true });
+        shoppingpagewithoutlogin.searchButton().click({ force: true });
+        shoppingpagewithoutlogin.productDetailsButton().click();
+        shoppingpagewithoutlogin.addToCartButton().click();
+        shoppingpagewithoutlogin.searchIcon().click();
+        shoppingpagewithoutlogin.searchBox().type(mydata1.searchMovie);
+        shoppingpagewithoutlogin.searchButton().click();
+        shoppingpagewithoutlogin.productDetailsButton().click();
+        shoppingpagewithoutlogin.addToCartButton().click();
+        shoppingpagewithoutlogin.searchIcon().click();
+        shoppingpagewithoutlogin.searchBox().type(mydata1.searchLaptop);
+        shoppingpagewithoutlogin.searchButton().click();
+        shoppingpagewithoutlogin.productDetailsButton().click();
+        shoppingpagewithoutlogin.addToCartButton().click();
+        shoppingpagewithoutlogin.myCartButton().click();
+        shoppingpagewithoutlogin.firstProductText().invoke("text").should("contain", mydata1.searchTshirt);
+        shoppingpagewithoutlogin.secondProductText().invoke("text").should("contain", mydata1.searchMovie);
+        shoppingpagewithoutlogin.thirdProductText().invoke("text").should("contain", mydata1.searchLaptop);
+        shoppingpagewithoutlogin.firstProductQty().select(mydata1.productQty);
+        shoppingpagewithoutlogin.secondProductQty().select(mydata1.productQty, { force: true });
+        shoppingpagewithoutlogin.thirdProductQty().select(mydata1.productQty, { force: true });
+        shoppingpagewithoutlogin.checkoutButton().click();
+        shoppingpagewithoutlogin.firstName().type(mydata1.name)
+        shoppingpagewithoutlogin.lastName().type(mydata1.lastname);
+        shoppingpagewithoutlogin.email().type(mydata1.email1)
+        shoppingpagewithoutlogin.zip().type(mydata1.zip);
+        shoppingpagewithoutlogin.city().type(mydata1.city);
+        shoppingpagewithoutlogin.address1().type(mydata1.Address1);
+        shoppingpagewithoutlogin.contact().type(mydata1.number);
+        shoppingpagewithoutlogin.shippingAsBillingCheckbox().check();
+        shoppingpagewithoutlogin.continueCheckoutButton().click();
+        shoppingpagewithoutlogin.billingAddress1Line().should("contain", mydata1.Address1);
+        shoppingpagewithoutlogin.deliveryOnNextBusinessDay().check();
+        shoppingpagewithoutlogin.continueCheckoutButton2().click();
+        shoppingpagewithoutlogin.valueOfFirstProduct().should("contain", mydata1.valueProduct1);
+        shoppingpagewithoutlogin.valueOfSecondProduct().should("contain", mydata1.valueProduct2);
+        shoppingpagewithoutlogin.valueOfThirdProduct().should("contain", mydata1.valueProduct3);
+        shoppingpagewithoutlogin.productQtyFirst().should("contain", mydata1.productQty);
+        shoppingpagewithoutlogin.productQtySecond().should("contain", mydata1.productQty);
+        shoppingpagewithoutlogin.productQtyThird().should("contain", mydata1.productQty);
+        shoppingpagewithoutlogin.shippingCharges().should("contain", mydata1.shippingCharges);
+        // shoppingpagewithoutlogin.placeOrderButton().click();
+        // shoppingpagewithoutlogin.orderDetails().should("contain", mydata1.orderDetails);
+        // shoppingpagewithoutlogin.orderID().should("contain", mydata1.orderID);
         // shoppingPage.orderTotal().should("contain", mydata1.orderTotal);
 
     })
