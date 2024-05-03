@@ -52,10 +52,10 @@ describe('Shopping without Login', () => {
         shoppingpagewithoutlogin.productQtySecond().should("contain", mydata1.productQty);
         shoppingpagewithoutlogin.productQtyThird().should("contain", mydata1.productQty);
         shoppingpagewithoutlogin.shippingCharges().should("contain", mydata1.shippingCharges);
-        // shoppingpagewithoutlogin.placeOrderButton().click();
-        // shoppingpagewithoutlogin.orderDetails().should("contain", mydata1.orderDetails);
-        // shoppingpagewithoutlogin.orderID().should("contain", mydata1.orderID);
-        // shoppingPage.orderTotal().should("contain", mydata1.orderTotal);
+        shoppingpagewithoutlogin.placeOrderButton().click();
+        shoppingpagewithoutlogin.orderDetails().should("contain", mydata1.orderDetails);
+        shoppingpagewithoutlogin.orderID().should("contain", mydata1.orderID);
+        shoppingpagewithoutlogin.orderTotal().should("contain", mydata1.orderTotal);
 
     })
 })
